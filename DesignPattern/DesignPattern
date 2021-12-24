@@ -17,11 +17,76 @@ Different types of design patterns
  =========
  3.a: Strategy Design pattern
       
+ Algorithm vary independently from the client that uses it
+ 
+ ------
+ interface Strategy {
+   public int calculate(int a, int b);
+ }
+ 
+ public class AddOperation implements Strategy{
+   public int calculate(int a , int b)
+   {
+       return a+b;
+   }
+ }
+ 
+ public class Subtract implements Strategy{
+   public int calculate(int a , int b)
+   {
+       return a-b;
+   }
+ }
+ 
+  public class Multiply implements Strategy{
+   public int calculate(int a , int b)
+   {
+       return a*b;
+   }
+  }
+   public class Division implements Strategy{
+   public int calculate(int a , int b)
+   {
+       return a/b;
+   }
+  }
+   
+   
+ class Context {
+ 
+ private Strategy strategy;
  
  
+ public Context (Strategy strategy)
+   {
+      this.strategy=strategy;
+ 
+   }
+ 
+ public int executeStrategy(int a, int b)
+   {
+    return strategy.calculate(a, b);
+ 
+    }
+ }
  
  
+ public class StrategyxExcutor{
  
+    public static void main (String args{})
+    {
+        Context ctx= new Context(new AddOperation());
+           ctx.executeStrategy(1,2);
+     
+     
+        ctx= new Context(new Subtract());
+          ctx.executeStrategy(3,4);
+        
+        ctx= new Context(new Multiply());
+            ctx.executeStrategy(4,5);
+        
+    }
+ }
  
  
  
