@@ -2,6 +2,8 @@ package com.coffeepoweredcrew.strategy;
 
 import java.util.LinkedList;
 
+import javax.print.PrintService;
+
 public class Client {
 
     private static LinkedList<Order> orders = new LinkedList<>();
@@ -14,7 +16,7 @@ public class Client {
         
     }
 
-    private static void createOrders() {
+    public static void createOrders() {
         Order o = new Order("100");
         o.addItem("Soda", 2);
         o.addItem("Chips", 10);
