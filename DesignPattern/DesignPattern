@@ -27,6 +27,8 @@ This pattern is based on Open/closed principle. We don’t need to modify the cont
  but can choose and add any implementation [open for extension].
 
 
+
+
 For example, in Collections.sort() – we don’t need to change the sort method to achieve different sorting results.
  We can just supply different comparators in runtime.
  
