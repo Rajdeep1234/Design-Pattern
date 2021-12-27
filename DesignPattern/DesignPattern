@@ -26,6 +26,7 @@ Different types of design patterns
 This pattern is based on Open/closed principle. We don’t need to modify the context [closed for modification],
  but can choose and add any implementation [open for extension].
 
+
 For example, in Collections.sort() – we don’t need to change the sort method to achieve different sorting results.
  We can just supply different comparators in runtime.
  
