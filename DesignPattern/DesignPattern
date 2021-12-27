@@ -21,6 +21,7 @@ Different types of design patterns
  Strategy pattern enables a client code to choose from a family of related but different algorithms 
  and gives it a simple way to choose any of the algorithm in runtime depending on the client context.
  
+ 
  Driven by Open/closed Principle
 This pattern is based on Open/closed principle. We don’t need to modify the context [closed for modification],
  but can choose and add any implementation [open for extension].
