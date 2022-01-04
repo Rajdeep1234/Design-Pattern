@@ -1,0 +1,74 @@
+
+Groups multiple objects into single group
+ i) Collection - set-->SortedSe , List , Queue, Dqueue
+ ii) Map--> SortedMap
+
+List<Strig> lit= new ArrayList<>() // jdk 7 or later use diamond operator
+
+ArrayList--> non-synchronized,mainains order
+             Uses dynamic array
+      
+LinkedList--> Doubly linked list internally
+              stores duplicate
+              maintains insertion order
+              not synchronized
+           manipulation is fast --as no shifting is required
+ Vector --> dynamic array 
+            synchronized
+            more methods --not part of collection framework
+
+ Stack-- subclass of vector
+
+Queue--ordered list--priorityQueue, Dqueue, ArrayQueue --which implements queue interface
+
+PriorityQueue-- 	
+
+Set --at most one null
+
+// Implementation
+  i) Dynamic Array
+  ii) 
+  
+  
+ //Serializable --marker interface
+ //Cloneable  and Remote 
+ 
+ import java.io.Serializable;  
+public class Student implements Serializable{  
+ int id;  
+ String name;  
+ Address address;//HAS-A  --must be serializable
+ public Student(int id, String name) {  
+  this.id = id;  
+  this.name = name;  
+ }  
+}  
+
+
+
+ It is used to verify the sender and receiver of the serialized object.
+  The sender and receiver must be the same. To verify it, SerialVersionUID is used.
+   The sender and receiver must have the same SerialVersionUID,
+  otherwise, InvalidClassException will be thrown when you deserialize the object.
+  
+    
+  
+If you don't want to serialize any data member of a class, you can mark it as transient.
+  
+  
+  There are some cases of Serialization with respect to inheritance:
+
+Case 1: If the superclass is serializable, then subclass is automatically serializable
+
+Case 2: If a superclass is not serializable, then subclass can still be serialized 
+
+Case 3: If the superclass is serializable, but we don’t want the subclass to be serialized
+
+
+by implementing the writeObject() and readObject() methods in the subclass and 
+needs to throw NotSerializableException from these methods. 
+These methods are executed during serialization and de-serialization, respectively. 
+By overriding these methods, we are just implementing our custom serialization.
+
+  
+  
