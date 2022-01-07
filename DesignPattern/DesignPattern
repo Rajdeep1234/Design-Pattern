@@ -12,7 +12,35 @@ Different types of design patterns
      3.b:Observer
      3.c:Iterator
      
- 
+ 1.a.Singleton
+  A class has only one instance and provides global access to this instance.
+  //recommended not to use the singleton 
+  
+  class Singleton
+  {
+    private static Singleton instance=null;
+    
+    private Singleton(){};
+   
+    public static Singleton getInstance ()
+    {
+        if (null!=instance)
+        {
+           synchronized(Singleton.class)
+           {
+           if(instance==null)
+             {
+              instance= new Singleton();
+             }
+             
+           }
+        }
+        
+        return instance;
+    }
+  
+  }
+  
  
  =========
  3.a: Strategy Design pattern
