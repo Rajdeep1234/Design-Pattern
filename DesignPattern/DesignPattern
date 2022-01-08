@@ -15,17 +15,32 @@
 Different types of design patterns
 1. Creational design patterns
      1.a: Singleton
-     1.b: Factory
+     1.b: Factory 
+          i) abstract factory
+          ii) factory method
      1.c: Builder
+     1.d prototype
 2. Structural Design pattern 
      2.a: Adapter
-     2.b:Decoraor
+     2.b:Decorator
      2.c:Proxy
+       d.  facade
+        e. flyweight
+        f. composite
+        g. Bridge
 3. Behavioural Design pattern
      3.a:Strategy
      3.b:Observer
      3.c:Iterator
-     
+        d.state
+        e.visitor
+        f.Interpretor
+        g. command
+        h. chain of responsibility
+        i. Mediator
+        j.Memento
+        k. null object
+        .template method
  1.a.Singleton
   A class has only one instance and provides global access to this instance.
   //recommended not to use the singleton 
