@@ -1,0 +1,50 @@
+
+NEW --start--> Runnable ---->(resume/ Waiting)  Blocked
+
+Runnable----Finished---> Terminated
+
+New
+Runnable
+Blocked(waiting for monitor lock)
+Terminated
+(specific variation of blocked state)
+Waiting --(indefinitely)
+Timed_Waiting(for some specific time)
+======
+
+ //currentThread()
+         //positive , long integer
+         // long getID()
+         // String for identifiction
+         //Multiple thread can have same name
+         //Default name structure Thread-N
+         // String getName()
+         // priority 1-10
+         // DO not maintain ref to parent thread
+         
+         
+         //Extend Thread class --override run method
+         //Thread constructor method and pass a runnable(implement) object as its target
+         
+         // Runnable is recommended as ---oop suggests to use implementation , multiple implementation is possible and extend is possible
+         
+         =====================
+         
+         
+         Daemon thread(background) does not prevent the process from terminating
+         
+         //make sure threads are not terminating prematurely
+         //when the jvm halts , any remaining daemon threads are abandoned
+         /// by default non -daemon thread --> turn into a daemon thread
+          
+         //synchronized--easier, prevens many pitfalls of locks
+         //locks--more flexiility
+         
+         
+         
+         
+         
+         
+         
+         
+         

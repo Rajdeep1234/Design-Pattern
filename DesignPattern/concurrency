@@ -1,0 +1,4 @@
+Semaphore s = new Semaphore(0);
+    Semaphore s2 = new Semaphore(1);
+
+the wait operation works only if semaphore = 1, and the signal operation succeeds when semaphore= 0

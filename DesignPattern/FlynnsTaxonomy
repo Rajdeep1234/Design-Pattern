@@ -1,0 +1,49 @@
+SISD- Single Instruction Multiple Data
+    Sequential processing
+    
+MISD- Multiple Instruction Single Data
+    Different inst. but same data
+    
+SIMD-Single Instruction Multiple Data
+    Two Processor executing same instruction but on different data
+    
+MIMD- Multiple Instruction Multiple Data
+    Each processing unit executing diff. series  of inst and on diff set of data
+    
+ ========================= parallel computing=========
+ 
+ SPMD- Multiple processing unit executing the same copy of code on diff data (Although same program but not necessarily same inst)
+ Most Common
+   SPMD --->MIMD architecture
+ MPMD- processor executing diff programs
+ 
+ =====================================================
+ 
+ 
+ Shared memory--access the same memory with the global address space
+
+    UMA---SMP-symmetric Multiprocessing --multiple processors connected to a system memory through a system bus
+         Cache coherency--cache is not updated in every processor cache
+         
+    NUMA--multiple smp--some processor is having quicker access to the memory over other using the bus
+      
+      easier to share to data
+    
+   not scalable-- increases traffic in the system bus
+    
+    distributed memory architecture--each processor is having its own address space with its own memory
+                                   no global space
+                                   
+    
+    Concurrency-- two tasks running but not necessarily simultaneously. to tasks on single cpu
+    
+    parallelism-application splits the tasks into smaller tasks, smaller sub tasks can be processed in parallel
+    
+    
+    
+    
+    
+      -
+ 
+ 
+   
