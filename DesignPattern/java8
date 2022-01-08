@@ -1,0 +1,103 @@
+1)Lambda
+   enables functional programming
+   readable and concise code
+   easier to use apis and libraries
+   parallel processing
+   
+2)functional interface
+3)method references
+4)collection improvemens
+
+
+Functional vs OOP
+
+problems in oop
+  everything is an object
+  all code blocks are associated with class or object
+   
+   
+   lambdas
+     functions exists in isolation , these can be treated as values
+     
+     function as values
+     String name="foo"; //inline values
+     double pi=3.14;
+     
+     
+     block of code as values
+     aBlockOfCode={
+     }
+     
+     aBlockOfCode=public void perform(){
+     Syso("hw");
+     }
+     
+     remove public as these exists in isolation
+     
+     remove method name as variable name is there
+     
+     remove void as compiler is smart enough to understand the return type
+     
+     aBlockOfCode= (){
+     Syso("hw");
+     }
+     
+     small addition:
+     
+     aBlockOfCode=()->{
+     Syso("hw");
+     }
+     
+     if body is of 1 line
+     
+     
+     aBlockOfCode=()->  Syso("hw");
+     
+     
+     greetingFunction =()-> syso("HW");
+     
+     
+     
+     greet(greetingFunction);
+     
+     doubleNumberFunction=(int a)-> a*2;
+     
+     addFucion=(int a ,int b)->a+b;
+     
+     safeDivideFunction=(int a ,int b)->{
+     if(b==0) return 0;
+     return    a/b;
+     }
+     
+     stringlengthcount=(String s)-> s.length();       
+     
+     type of these variables
+     
+     
+     type inference
+     
+     
+     Functional Interface
+    -->  one abstract method
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     

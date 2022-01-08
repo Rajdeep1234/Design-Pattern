@@ -35,8 +35,8 @@ public class DataRaceDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		Shopper s1=new Shopper();
-		Shopper s2 =new Shopper();
+		TryLockDemo s1=new TryLockDemo();
+		TryLockDemo s2 =new TryLockDemo();
 		
 		s1.start();
 		s2.start();
@@ -45,7 +45,7 @@ public class DataRaceDemo {
 		s2.join();
 		
 		
-		System.out.println(" count "+Shopper.ai);
+		System.out.println(" count "+TryLockDemo.ai);
 		
 	}
 

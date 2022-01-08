@@ -25,7 +25,7 @@ public class DaemonThread {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 Thread olivia=new kitchenCleaner();
-olivia.setDaemon(true);
+olivia.setDaemon(true);// if not set then program will keep on continue, main thread will not be able to terminate
 olivia.start();
 System.out.println("Barron is cooking");
 Thread.sleep(500);

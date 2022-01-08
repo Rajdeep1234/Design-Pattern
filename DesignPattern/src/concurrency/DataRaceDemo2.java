@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class ShopperLock extends Thread {
 	static int garliccount=0;
-	private synchronized static int getnumber()
+	private synchronized static int getnumber() //without static it will not work, threads will invoke their own version of getnumber
 	{
 		return garliccount++;
 	};
@@ -14,7 +14,7 @@ class ShopperLock extends Thread {
 		
 		for(int i=0;i<1000000;i++)
 		{
-			synchronized(ShopperLock.class)
+			synchronized(ShopperLock.class)//synchronized static method or this one
 			{
 			getnumber();
 			}

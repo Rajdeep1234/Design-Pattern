@@ -104,6 +104,147 @@ For example, in Collections.sort() – we don’t need to change the sort method to 
     }
  }
  
+ ==============Factory Method==========
+ 
+ A component responsible for wholesale creation of objects , not piecewise
+ 
+ class Point{
+ private double x,y;
+ private Point(double x, double y) //private construcor , forcing user to create obj using method to avoid constructor overloading
+ {
+ this.x=x;
+ this.y=y;
+ 
+ }
+ 
+ public static  Point newCartesianPoint(double x, double y)
+ {
+ return new Point(x,y);
+ }
+ 
+  public static  Point newPolarPoint(double rho, double theta)
+ {
+ return new Point(rho*Math.cos(theta),rho*Math.sin(theta));
+ }
+ 
+ }
+ 
+ 
+ public static void main(String args[])
+ {
+ Point point=Point.newPolarPoint2,3);
+ 
+ }
+ 
+ 
+ =================Factory=============
+ 
+ //Factory design pattern
+abstract class IPhone {
+	public IPhone() {
+		System.out.println("New IPhone!");
+	}
+	
+	abstract public IPhone getPhone();
+}
+
+class ChennaiFactory extends IPhone {
+
+	public IPhone getIPhone() {
+		return new IPhone();
+	}
+	
+}
+
+class NoidaFactory extends IPhone {
+
+	public IPhone getIPhone() {
+		return new IPhone();
+	}
+	
+}
+
+class PhoneRegister {
+	
+	public static IPhone getIPhone(String area) {
+		if("Noida".equalsIgnoreCase(area)) {
+			return new NoidaFactory().getIPhone();
+		} else {
+			return new ChennaiFactory().getIPhone();
+		}
+	}
+}
+
+public class FactoryExecutor {
+	public static void main(String[] args) {
+		IPhone iPhone = PhoneRegister.getIPhone("Noida");
+		
+	}
+}
+ 
+ 
+ 
+ 
+ 
+ ====================Builder======
+ 
+ 
+ //Builder design pattern
+class BankAccount {
+	private int id; //mandatory
+	private String owner; //mandatory
+	private String address;
+	private float amount;
+	
+	public String toString() {
+	return "[ id="+id+"\n owner="+owner+"\n address="+address+" amount="+amount+" ]";
+	}
+}
+
+class BankAccountBuilder {
+	private int id; //mandatory
+	private String owner; //mandatory
+	private String address;
+	private float amount;
+	BankAccount bankAccount;
+	
+	BankAccountBuilder(int id, String owner) {
+		this.id = id;
+		this.owner = owner;
+	}
+	
+	BankAccountBuilder setAddress(String address) {
+		this.address = address;
+		return BankAccountBuilder;
+	}
+	BankAccountBuilder setAmount(float amount) {
+		this.amount = amount;
+		return BankAccountBuilder;
+	}
+	
+	BankAccount build() {
+		BankAccount account = new BankAccount();
+		account.id = this.id;
+		account.owner = this.owner;
+		account.address = this.address;
+		account.amount = this.amount;
+		return account;
+	}
+}
+
+public class BuilderExecutor {
+	public static void main(String[] args) {
+		BankAccount bankAccount = new BankAccountBuilder(10001456, "Sai Dipak")
+									.setAddress("Bangalore, Karnataka")
+									.setAmount(10000.0F)
+									.build();
+									
+		System.out.println(bankAccount);
+	}
+}
+ 
+ =========================
+ 
  
  
  
