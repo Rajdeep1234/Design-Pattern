@@ -1,0 +1,79 @@
+1. Understand clarity of the code
+2. Focus on 4 principles of simple design
+3. get started with simple design
+4. understand TDD
+
+Gilded rose
+    clarity of code
+    give importance o unit testing
+    
+    i) clean code
+    ii) unit test
+    ===============
+    
+    4 principles of simple design
+    
+    1.Agile and extreme programming
+        i). change is expected
+        ii).no big 
+        iii) no big design upfront
+        
+    2. Good goals for sarting programmers
+    
+    3. Design vs Architecture
+         Architecture --difficult to change
+         Design -- Easier to change
+         
+         
+         A> Runs all tests
+             code should work
+             have automated tests
+             design evolves(not created in one day)
+             
+         B> Minimize duplicates
+             TDD leads to better tests and btte design
+             
+         C> Maximize clariy
+              
+              More bugs 
+              More maintenance
+              Code we write today will be maintained by someone else later
+              Focus on naming , variables, classes
+              
+             
+         D> Keep it simple
+               Extra layer -->additional complexity
+                              more code to maintain
+                              
+                              
+    Summary:   Simplest possible testable approach while
+          maximizing clarity and 
+          reducing duplication
+          
+          
+          Naming
+            --as long as necessary
+            -- length is inversely proportional to scope
+            --memeber variable , scope is entire class
+            --follow coventions
+              package, classes, interfaces, Methods, variables, constants
+              project specific
+              
+              
+           comments
+           
+           1. api comments
+           2. help other programmer to understand
+           3.todo , fixme
+           
+           
+              
+              
+          
+          
+            
+    
+    
+    
+    
+    
