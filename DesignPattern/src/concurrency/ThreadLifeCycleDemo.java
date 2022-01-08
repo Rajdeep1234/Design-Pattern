@@ -38,7 +38,7 @@ public class ThreadLifeCycleDemo {
          System.out.println(" Olivia state "+ olivia.getState());
          System.out.println("Barren patiently waiting for olivia to finish and join");
          
-         olivia.join();
+         olivia.join(); //main thread will wait untill olivia thread terminates
          System.out.println(" Olivia state "+ olivia.getState());
          
          System.out.println("Barron and olivia are both done");

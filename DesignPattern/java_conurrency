@@ -10,7 +10,37 @@ Terminated
 (specific variation of blocked state)
 Waiting --(indefinitely)
 Timed_Waiting(for some specific time)
+
+
+-----------
+
+Thread life cycle
+
+ Main thread --->child thread (independently)
+  main --last to finish execution
+1.NEW 
+!
+start
+!
+2.Runnable-- ready for execution--context switch happens with other threads
+
+3. blocked--->runnable
+4. terminated
+----
+5. waiting(indefinite time)
+6. timed waiting (for some specific waiting time)
+
+join ()-- wait until another thread completes execution
+
+
+
+
 ======
+Semaphore s = new Semaphore(0);
+    Semaphore s2 = new Semaphore(1);
+
+the wait operation works only if semaphore = 1, and the signal operation succeeds when semaphore= 0
+==============
 
  //currentThread()
          //positive , long integer
