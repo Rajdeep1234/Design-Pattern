@@ -81,11 +81,16 @@ problems in oop
     -->  one abstract method
      
      
+     this 
+     points to anonymous inner class in which it is mentioned
+     for lambda--this ref points to the instance of the class that the lambda is being called on
+     
+     Method reference
      
      
+     people.forEach(System.out::println);//no necessarily sequential, parallel processing possible
      
-     
-     
+     streams--a sequence of elements supporting sequential and parallel aggregate operations
      
      
      
