@@ -4,5 +4,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.13/66d95a5d2d436961b4cae036723f4c7a764fc14c/spring-web-5.3.13.jar" sourcepath="C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.13/b5a502f2450a025b5fe3508457688fd3037d4721/spring-web-5.3.13-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="functionalTest,main,test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
