@@ -47,11 +47,15 @@ public class Graph {
 	void addEdge(Vertex source, Vertex des, boolean bidirecional) {
 		
 		if(bidirecional) {
+			if(adjlistMap.keySet().contains(source) && adjlistMap.keySet().contains(des)) {
 			adjlistMap.get(source).add(des);
 			adjlistMap.get(des).add(source);
+			}
 		}
 		else {
+			if(adjlistMap.keySet().contains(source)) {
 			adjlistMap.get(source).add(des);
+			}
 		}
 	}
 	
@@ -160,19 +164,19 @@ public class Graph {
     	
     	System.out.println(g.hasEdge(d, b));
     	
-    	System.out.println("BFS ");
+    	System.out.println("BFS : start node"+a.value);
     	
     	System.out.println(g.bfsTraversal(a));
     	
-    	System.out.println("DFS ");
+    	System.out.println("DFS : start node"+a.value);
     	
     	System.out.println(g.dfsTraversal(a));
     	
-System.out.println("BFS ");
+         System.out.println("BFS : start node"+e.value);
     	
     	System.out.println(g.bfsTraversal(e));
     	
-    	System.out.println("DFS ");
+    	System.out.println("DFS :start node"+e.value);
     	
     	System.out.println(g.dfsTraversal(e));
     	
