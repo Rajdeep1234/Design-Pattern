@@ -30,9 +30,6 @@ public class Graph {
 		
 	}
 	
-	public void insert(Vertex source, Vertex target){
-	       
-    }
 	
 	
 	
@@ -132,6 +129,41 @@ public class Graph {
 		return visited;
 		
 	}
+	
+	public List<Vertex> bfsTraRecursive(Vertex v) {
+		return null;
+	}
+	
+	public List<Vertex> dfsTraRecursive(Vertex v) {
+		return null;
+	}
+
+
+	private boolean hasVertex(Vertex a) {
+       return adjlistMap.containsKey(a);		
+	}
+
+
+
+
+	private int getEdgesCount(boolean b) {
+         int count=0;
+		for(Vertex v:adjlistMap.keySet()) {
+			count+=adjlistMap.get(v).size();
+		}
+		return count/2;
+	}
+
+
+
+
+	private int getVertexCount() {
+       return 	adjlistMap.keySet().size();	
+	}
+
+	 
+	 
+	 
 
 	public static void main(String[] args) {
         
@@ -140,6 +172,7 @@ public class Graph {
         Vertex c=new Vertex("C");
         Vertex d=new Vertex("D");
         Vertex e=new Vertex("E");
+        Vertex f=new Vertex("F");
         
         ArrayList<Vertex> list = new ArrayList<Vertex>();
     	list.add(a);
@@ -147,6 +180,7 @@ public class Graph {
     	list.add(c);
     	list.add(d);
     	list.add(e);
+    	list.add(f);
     		
     	//Constructing the graphs
     	Graph g = new Graph(list);
@@ -155,6 +189,7 @@ public class Graph {
     	g.addEdge(d, e,true);
     	g.addEdge(b, e,true);
     	g.addEdge(b, c,true);
+     	g.addEdge(b, f,true);
         
         
     	
@@ -180,13 +215,48 @@ public class Graph {
     	
     	System.out.println(g.dfsTraversal(e));
     	
-    	
+    	// Gives the no of vertices in the graph.
+       System.out.println( "vertex count : "+g.getVertexCount());
+ 
+        // Gives the no of edges in the graph.
+        System.out.println("edge count : "+g.getEdgesCount(true));
+ 
+        
+ 
+        // Tells whether vertex is present or not
+       System.out.println("has vertex "+a+" :"+ g.hasVertex(a));
+       
+//       C-->B 
+//
+//       F-->B 
+//
+//       E-->A D B 
+//
+//       A-->E D 
+//
+//       B-->E C F 
+//
+//       D-->A E 
+//
+//       true
+//       false
+//       BFS : start nodeA
+//       [A, E, D, B, C, F]
+//       DFS : start nodeA
+//       [A, D, E, B, F, C]
+//       BFS : start nodeE
+//       [E, A, D, B, C, F]
+//       DFS :start nodeE
+//       [E, B, F, C, D, A]
+//       vertex count : 6
+//       edge count : 6
+//       has vertex A :true
+
         
 	}
 
-	 
-	 
-	 
+
+
 	 
 	 
 	 
